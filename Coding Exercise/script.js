@@ -123,7 +123,28 @@ const calculateAverage = function (arr) {
     for (let i = 0; i < billings.length; i++) {
         totalOfArray += arr[i];
     }
-    return totalOfArray/arr.length
+    return totalOfArray / arr.length;
 };
 
 console.log(calculateAverage(billings));
+
+// SECTION 5- CHALLENGE #1
+const printForecast = function (arr) {
+    for (let i = 0; i < arr.length; i++) {
+        console.log(`... ${arr[i]}C in ${i + 1} days`);
+    }
+};
+
+printForecast([17, 21, 23]);
+printForecast([12, 5, -5, 0, 3]);
+
+const printForecastWeather = function (arr) {
+    let forecast = "";
+    for (let i = 0; i < arr.length; i++) {
+        forecast += `... ${arr[i]}C in ${i + 1} days `;
+    }
+    console.log(forecast.trim());
+};
+
+printForecastWeather([12, 13, 15]);
+// Output: ... 12C in 1 days ... 13C in 2 days ... 15C in
