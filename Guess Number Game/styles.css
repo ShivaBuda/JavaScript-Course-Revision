@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: darkslategray;
+    color: #f1f1f1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.container {
+    max-width: 75rem;
+    margin: 0 auto;
+    /* border: 2px solid white; */
+    padding: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+}
+.btn-msg-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.heading-primary {
+    text-align: center;
+    font-size: 4.8rem;
+}
+.display-result {
+    font-size: 6.4rem;
+    text-align: center;
+    background-color: #fff;
+    width: 12rem;
+    margin: 0 auto;
+    color: #555;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    color: #555;
+}
+
+.input-check-box {
+    display: flex;
+    flex-direction: column;
+}
+.input-num {
+    outline: none;
+    color: #555;
+    padding: 2rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    width: 20rem;
+    border-radius: 1rem;
+}
+
+.input-score-box {
+    display: flex;
+    justify-content: space-between;
+}
+.txt {
+    font-size: 1.8rem;
+    font-weight: bolder;
+    line-height: 4rem;
+}
