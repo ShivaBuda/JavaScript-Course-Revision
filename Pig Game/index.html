@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pig Game</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="heading-primary">Pig Game</h1>
+            <p class="message">
+                Roll the dice to start playing and reach 100 points!
+            </p>
+        </header>
+        <main class="main">
+            <section class="game-box">
+                <div class="player-box player--0 active-player">
+                    <h2 class="player-name">Player 1</h2>
+                    <p class="score score--0">0</p>
+                    <p class="player-1-current">
+                        Current <span class="current--0">0</span>
+                    </p>
+                </div>
+                <div class="player-box player--1">
+                    <h2 class="player-name">Player 2</h2>
+                    <p class="score score--1">0</p>
+                    <p class="player-2-current">
+                        Current <span class="current--1">0</span>
+                    </p>
+                </div>
+
+                <section class="button-box">
+                    <button class="btn btn__new-game">New Game</button>
+                    <img
+                        class="dice-img hidden"
+                        src="./img/face-1.png"
+                        alt="Dice Image" />
+                    <button class="btn btn__roll-dice">Roll Dice</button>
+                    <button class="btn btn__hold">Hold</button>
+                </section>
+            </section>
+        </main>
+        <!-- 
+        <h1>Pig Game</h1>
+        <div class="game-container">
+            <div class="player player-0">
+                <h2>Player 1</h2>
+                <p class="score">Score: <span class="score-value">0</span></p>
+                <p class="current">
+                    Current: <span class="current-value">0</span>
+                </p>
+                <button class="btn-roll">Roll Dice</button>
+                <button class="btn-hold">Hold</button>
+            </div>
+            <div class="player player-1">
+                <h2>Player 2</h2>
+                <p class="score">Score: <span class="score-value">0</span></p>
+                <p class="current">
+                    Current: <span class="current-value">0</span>
+                </p>
+                <button class="btn-roll">Roll Dice</button>
+                <button class="btn-hold">Hold</button>
+            </div>
+        </div> -->
+    </body>
+</html>

@@ -1,0 +1,151 @@
+/* CSS Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables for color palette */
+:root {
+    --colorlime-1: #365314;
+    --colorlime-2: #4d7c0f;
+    --colorlime-3: #65a30d;
+    --colorlime-4: #a3e635;
+
+    --colorstone-1: #1c1917;
+    --colorstone-2: #44403c;
+    --colorstone-3: #a8a29e;
+}
+
+.hidden {
+    display: none;
+}
+.active-player {
+    background-color: var(--colorlime-4);
+}
+.bg--winner{
+    background-color: tomato;
+}
+
+/* Base font and body styling */
+html {
+    font-size: 62.5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+    max-width: 75rem;
+    background: linear-gradient(to right bottom, #c6ff00, #00bcd4);
+    font-family: inherit;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Heading styles */
+.heading-primary {
+    font-size: 3.2rem;
+    color: var(--colorstone-2);
+    margin-bottom: 3.2rem;
+}
+
+/* Message styling */
+.message {
+    font-size: 1.3rem;
+    margin-bottom: 2.8rem;
+}
+
+/* Main game container */
+.game-box {
+    position: relative;
+    display: flex;
+    height: 50vh;
+    color: var(--colorstone-2);
+    background-color: var(--colorlime-3);
+}
+
+/* Player container */
+.player-box {
+    padding: 4rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Score display */
+.score {
+    font-size: 4.8rem;
+    color: var(--colorlime-1);
+    margin-top: 2.8rem;
+}
+
+/* Player name styling */
+.player-name,
+.player-name {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+/* Button container styling */
+.button-box {
+    /* display: none; */
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+/* Button styling */
+.btn {
+    letter-spacing: 1.6px;
+    border: none;
+    border-radius: 5rem;
+    font-size: 1.4rem;
+    padding: 0.8rem 1.6rem;
+    color: inherit;
+}
+.btn__roll-dice {
+    margin-top: auto;
+}
+
+/* Dice image styling */
+.dice-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Player current score box */
+.player-1-current,
+.player-2-current {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--colorlime-1);
+    padding: 1rem 2rem;
+    border-radius: 0.4rem;
+    color: var(--colorstone-3);
+    font-size: 1.4rem;
+    font-weight: 200;
+}
+
+/* Player current score value */
+.player-1-current-value,
+.player-2-current-value {
+    font-size: 2.4rem;
+}
