@@ -1,3 +1,4 @@
+"use strict"
 // Select DOM elements
 const resetBtnEl = document.querySelector(".btn-reset");
 resetBtnEl.addEventListener("click", resetGame);
@@ -38,7 +39,9 @@ function resetGame() {
 function checkGuess() {
     guessNum = +inputEl.value;
     // Only check if input is provided
-    if (guessNum && score > 0 && score < 21) {
+    // (guessNUm && score > 0 && score < 21)?? not working now. Will back again for this.
+    if (guessNum && 0 < score) {
+        guessMsg = "Enter positive number";
         // if (randomNum < +inputEl.value) {
         //     // Guess is too high
         //     guessMsg = "Too high";
@@ -86,13 +89,15 @@ function checkGuess() {
                 checkBtnEl.disabled = true;
                 bodyEl.style.backgroundColor = "#962626ff";
                 displayResultEl.textContent = randomNum;
+                score = 0;
             }
         }
 
         // Update score and message on UI
         scoreEl.textContent = score;
-        guessingMsgEl.textContent = guessMsg;
+        // guessingMsgEl.textContent = guessMsg;
     } else {
         guessMsg = "Input number between 1 to 20!";
     }
+    guessingMsgEl.textContent = guessMsg;
 }
