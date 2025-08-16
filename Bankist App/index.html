@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Welcome | Bankist</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+        <!-- NAVIGATION -->
+        <nav class="nav">
+            <h3 class="welcome">Log in to get started</h3>
+
+            <img src="logo.png" alt="Company logo" class="logo" />
+            <form class="form-login">
+                <input
+                    type="text"
+                    class="input-login userName"
+                    required
+                    placeholder="user" />
+                <input
+                    type="password"
+                    class="input-login pin"
+                    placeholder="pin"
+                    required
+                    maxlength="4" />
+                <button type="submit" class="btn-login">Log in</button>
+            </form>
+        </nav>
+        <main class="main-container">
+            <div class="balance">
+                <div>
+                    <p class="balance__title">Current balance</p>
+                    <p class="balance__date">
+                        As of
+                        <span class="balance__date-time"
+                            >14/08/2025, 18:30 pm</span
+                        >
+                    </p>
+                </div>
+                <p class="balance__amount">SG50000.00</p>
+            </div>
+            <!-- MOVEMENTS -->
+            <section class="movements">
+                <div class="col-left">
+                    <ul class="movements__lists">
+                        <li class="movements__itm">
+                            <span class="movements__type">Deposit</span>
+                            <span class="movements__date">3/12/2025</span>
+                            <span class="movements__value">SG1300</span>
+                        </li>
+                        <li class="movements__itm">
+                            <span class="movements__type">Withdrawal</span>
+                            <span class="movements__date">3/12/2025</span>
+                            <span class="movements__value">SG1300</span>
+                        </li>
+                        <li class="movements__itm">
+                            <span class="movements__type">Deposit</span>
+                            <span class="movements__date">3/12/2025</span>
+                            <span class="movements__value">SG1300</span>
+                        </li>
+                        <li class="movements__itm">
+                            <span class="movements__type">Deposit</span>
+                            <span class="movements__date">3/12/2025</span>
+                            <span class="movements__value">SG1300</span>
+                        </li>
+                    </ul>
+                    <aside class="summary">
+                        <p class="summary__in">
+                            in <span class="summary__in-value">SG 100</span>
+                        </p>
+                        <p class="summary__in">
+                            out <span class="summary__in-value">SG 100</span>
+                        </p>
+                        <p class="summary__in">
+                            Interest
+                            <span class="summary__in-value">SG 100</span>
+                        </p>
+                        <button class="btn btn-sort">&darr; Sort</button>
+                    </aside>
+                </div>
+                <div class="col-right">
+                    <div class="transfer">
+                        <h3 class="heading-secondary">Transfer</h3>
+                        <form action="" class="form">
+                            <div class="input-label">
+                                <input
+                                    class="form__input"
+                                    type="text"
+                                    id="transfer-to"
+                                    required />
+                                <label for="transfer-to">Transfer to</label>
+                            </div>
+                            <div class="input-label">
+                                <input
+                                    class="form__input"
+                                    type="number"
+                                    id="amount"
+                                    required />
+                                <label for="amount">Amount </label>
+                            </div>
+                            <button type="submit" class="btn">Transfer</button>
+                        </form>
+                    </div>
+                    <div class="loan">
+                        <h3 class="heading-secondary">Request Loan</h3>
+                        <form action="" class="form">
+                            <div class="input-label">
+                                <input
+                                    class="form__input"
+                                    type="text"
+                                    id="loan"
+                                    required />
+                                <label for="loan">Transfer to</label>
+                            </div>
+
+                            <button class="btn">Request</button>
+                        </form>
+                    </div>
+                    <div class="close">
+                        <h3 class="heading-secondary">Close account</h3>
+                        <form action="" class="form">
+                            <div class="input-label">
+                                <input
+                                    class="form__input"
+                                    type="text"
+                                    id="close"
+                                    required />
+                                <label for="close">Confirm user</label>
+                            </div>
+                            <div class="input-label">
+                                <input
+                                    class="form__input"
+                                    type="number"
+                                    id="pin"
+                                    required />
+                                <label for="pin">Confirm PIN </label>
+                            </div>
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                    <p class="logout-timer">You will be logged out in <span>10.00</span></p>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

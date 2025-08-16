@@ -1,0 +1,208 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    line-height: 1.5;
+    font-family: sans-serif;
+    background: #e6e3e3;
+    color: #555;
+    letter-spacing: 1px;
+}
+
+img,
+picture,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* NAVIGATION */
+.nav {
+    /* max-width: 120rem;
+     margin: 0 auto; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    background-color: rgb(252, 243, 245);
+}
+.welcome {
+    font-size: 1.8rem;
+}
+
+.logo {
+    width: 4rem;
+}
+
+.form-login {
+    display: flex;
+    gap: 2rem;
+}
+.btn-login {
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color: rgb(177, 250, 177);
+    padding: 0.2rem 1.8rem;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+.input-login {
+    background-color: #eee;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 5rem;
+}
+
+.main-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 3.2rem 0;
+}
+
+/* BALANCE STATUS */
+.balance {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+.balance__title {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.balance__date {
+    color: #777;
+    font-size: 1rem;
+}
+.balance__amount {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* MOVEMENT */
+.movements {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2.4rem;
+}
+.col-left {
+    background-color: #fff;
+    grid-column: 1/5;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.movements__lists {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.movements__itm {
+    display: flex;
+    gap: 1.4rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 1rem;
+}
+.movements__type {
+    background-color: green;
+    text-transform: uppercase;
+    border-radius: 5rem;
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+}
+.movements__value {
+    margin-left: auto;
+}
+/* SUMMARY */
+.summary {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem;
+}
+
+.col-right {
+    grid-column: 5/-1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.transfer,
+.loan,
+.close {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
+.transfer {
+    background-color: rgb(242, 201, 208);
+}
+.loan {
+    background-color: rgb(237, 172, 160);
+}
+.close {
+    background-color: rgb(248, 132, 132);
+}
+.form {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.form__input {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 0.6rem;
+    margin: 1rem 0 0.4rem 0;
+    max-width: 9rem;
+}
+.input-label {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.btn {
+    background-color: #fff;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    border-radius: 5rem;
+    cursor: pointer;
+    transform: translateY(-3px);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.logout-timer{
+    text-align: end;
+}
