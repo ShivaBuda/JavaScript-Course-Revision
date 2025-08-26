@@ -89,6 +89,10 @@ ol {
     margin: 0 auto;
     padding: 3.2rem 0;
 }
+.hidden{
+    opacity: 0;
+    visibility: hidden;
+}
 
 /* BALANCE STATUS */
 .balance {
@@ -126,6 +130,7 @@ ol {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    overflow-y: scroll;
 }
 .movements__itm {
     display: flex;
@@ -134,12 +139,17 @@ ol {
     padding-bottom: 1rem;
 }
 .movements__type {
-    background-color: green;
     text-transform: uppercase;
     border-radius: 5rem;
     color: #fff;
     font-size: 0.8rem;
     padding: 0.4rem 0.8rem;
+}
+.movements__deposit{
+    background-color: rgb(43, 162, 43);
+}
+.movements__withdrawl{
+    background-color: rgb(219, 62, 62);
 }
 .movements__value {
     margin-left: auto;
@@ -150,13 +160,26 @@ ol {
     justify-content: space-between;
     padding: 1.2rem;
 }
+.summary--txt{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.summary--value{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(43, 162, 43);
+}
+.summary__out-value{
+    color: tomato;
+}
 
 .col-right {
     grid-column: 5/-1;
 
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3.2rem;
 }
 
 .transfer,
@@ -205,4 +228,9 @@ ol {
 }
 .logout-timer{
     text-align: end;
+}
+
+.logout-timer{
+    margin-top: auto;
+    margin-bottom: 2.4rem;
 }
