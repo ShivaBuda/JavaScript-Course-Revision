@@ -1,0 +1,35 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-show_chart" viewBox="0 0 24 24">
+<path d="M3.516 18.469l-1.5-1.5 7.5-7.5 3.984 4.031 7.078-7.969 1.406 1.406-8.484 9.563-3.984-4.031z"></path>
+</symbol>
+<symbol id="icon-monitor" viewBox="0 0 24 24">
+<path d="M20.016 3h-16.031q-0.797 0-1.383 0.586t-0.586 1.43v10.969q0 0.844 0.586 1.43t1.383 0.586h3l-0.984 0.984v2.016h12v-2.016l-0.984-0.984h3q0.797 0 1.383-0.586t0.586-1.43v-10.969q0-0.844-0.586-1.43t-1.383-0.586zM20.016 15.984h-16.031v-10.969h16.031v10.969z"></path>
+</symbol>
+<symbol id="icon-home" viewBox="0 0 32 32">
+<path d="M32 18.451l-16-12.42-16 12.42v-5.064l16-12.42 16 12.42zM28 18v12h-8v-8h-8v8h-8v-12l12-9z"></path>
+</symbol>
+<symbol id="icon-credit-card" viewBox="0 0 32 32">
+<path d="M29 4h-26c-1.65 0-3 1.35-3 3v18c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3v-18c0-1.65-1.35-3-3-3zM3 6h26c0.542 0 1 0.458 1 1v3h-28v-3c0-0.542 0.458-1 1-1zM29 26h-26c-0.542 0-1-0.458-1-1v-9h28v9c0 0.542-0.458 1-1 1zM4 20h2v4h-2zM8 20h2v4h-2zM12 20h2v4h-2z"></path>
+</symbol>
+<symbol id="icon-display" viewBox="0 0 32 32">
+<path d="M0 2v20h32v-20h-32zM30 20h-28v-16h28v16zM21 24h-10l-1 4-2 2h16l-2-2z"></path>
+</symbol>
+<symbol id="icon-upload" viewBox="0 0 32 32">
+<path d="M14 18h4v-8h6l-8-8-8 8h6zM20 13.5v3.085l9.158 3.415-13.158 4.907-13.158-4.907 9.158-3.415v-3.085l-12 4.5v8l16 6 16-6v-8z"></path>
+</symbol>
+<symbol id="icon-user-minus" viewBox="0 0 32 32">
+<path d="M12 23c0-4.726 2.996-8.765 7.189-10.319 0.509-1.142 0.811-2.411 0.811-3.681 0-4.971 0-9-6-9s-6 4.029-6 9c0 3.096 1.797 6.191 4 7.432v1.649c-6.784 0.555-12 3.888-12 7.918h12.416c-0.271-0.954-0.416-1.96-0.416-3z"></path>
+<path d="M23 14c-4.971 0-9 4.029-9 9s4.029 9 9 9c4.971 0 9-4.029 9-9s-4.029-9-9-9zM28 24h-10v-2h10v2z"></path>
+</symbol>
+<symbol id="icon-exit" viewBox="0 0 32 32">
+<path d="M24 20v-4h-10v-4h10v-4l6 6zM22 18v8h-10v6l-12-6v-26h22v10h-2v-8h-16l8 4v18h8v-6z"></path>
+</symbol>
+<symbol id="icon-tab" viewBox="0 0 32 32">
+<path d="M30 0h2v16h-2v-16z"></path>
+<path d="M0 16h2v16h-2v-16z"></path>
+<path d="M10 22h22v4h-22v5l-7-7 7-7v5z"></path>
+<path d="M22 10h-22v-4h22v-5l7 7-7 7z"></path>
+</symbol>
+</defs>
+</svg>

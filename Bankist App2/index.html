@@ -3,9 +3,270 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="img/icon.png" type="image/icon" />
         <title>Bankist | Welcome</title>
         <link rel="stylesheet" href="styles.css" />
         <script defer src="script.js"></script>
     </head>
-    <body></body>
+    <body>
+        <!-- ############ HEADER ##########-->
+        <header class="header">
+            <nav class="nav">
+                <img class="nav__logo" src="img/logo.png" alt="Bankist Logo" />
+                <ul class="nav__links">
+                    <li class="nav__itm">
+                        <a href="#" class="nav__link">Features</a>
+                    </li>
+                    <li class="nav__itm">
+                        <a href="#" class="nav__link">Operations</a>
+                    </li>
+                    <li class="nav__itm">
+                        <a href="#" class="nav__link">Testimonials</a>
+                    </li>
+                    <li class="nav__itm">
+                        <a href="#" class="nav__link nav__itm--btn"
+                            >Open Account</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__page">
+                <div class="header__txt--box">
+                    <h1 class="heading-primary">
+                        When <span class="highlight">banking</span> meets
+                        <span class="highlight">simplicity</span>
+                    </h1>
+                    <h4 class="heading-4">
+                        Say goodbye to complexity and hello to ease with
+                        Bankist.
+                    </h4>
+                    <a href="#" class="btn-more">Get started &downarrow;</a>
+                </div>
+
+                <img
+                    src="img/hero.png"
+                    alt="A note, keyboard and a plant"
+                    class="header__img" />
+            </div>
+        </header>
+        <!-- ############ MAIN ##########-->
+
+        <main class="main__container">
+            <!-- ############ FEATURES ##########-->
+            <section class="features">
+                <h4 class="heading-4">Features</h4>
+                <h2 class="heading-2">
+                    Everything you need in a modern banking and more.
+                </h2>
+                <div class="features__itms">
+                    <img
+                        class="features__img"
+                        src="img/digital-lazy.jpg"
+                        alt="Apple Desktop Computer" />
+
+                    <div class="features__text-box">
+                        <div class="features__icon">
+                            <svg>
+                                <use
+                                    xlink:href="img/sprite.svg#icon-display"></use>
+                            </svg>
+                        </div>
+
+                        <h3 class="heading-3">100% digintal bank</h3>
+                        <p class="features__txt">
+                            Experence banking with our fully digital platform.
+                            Its seamless and user-friendly interface makes
+                            banking easier than ever.
+                        </p>
+                    </div>
+                    <div class="features__text-box">
+                        <div class="features__icon">
+                            <svg class="">
+                                <use
+                                    xlink:href="img/sprite.svg#icon-show_chart"></use>
+                            </svg>
+                        </div>
+                        <h3 class="heading-3">100% digintal bank</h3>
+                        <p class="features__txt">
+                            Experence banking with our fully digital platform.
+                            Its seamless and user-friendly interface makes
+                            banking easier than ever.
+                        </p>
+                    </div>
+                    <img class="features__img" src="img/grow-lazy.jpg" alt="" />
+
+                    <img class="features__img" src="img/card-lazy.jpg" alt="" />
+                    <div class="features__text-box">
+                        <div class="features__icon">
+                            <svg class="">
+                                <use
+                                    xlink:href="img/sprite.svg#icon-credit-card"></use>
+                            </svg>
+                        </div>
+                        <h3 class="heading-3">100% digintal bank</h3>
+                        <p class="features__txt">
+                            Experence banking with our fully digital platform.
+                            Its seamless and user-friendly interface makes
+                            banking easier than ever.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ############ OPERATIONS ##########-->
+            <section class="operations">
+                <h4 class="heading-4">Operations</h4>
+                <h2 class="heading-2">
+                    Everything as simple as possible but no simpler.
+                </h2>
+                <!-- ********** TABS ********** -->
+                <div class="operations__tabs">
+                    <button class="operations__tab-btn operations__tab-btn-1">
+                        01 Instant Transfers
+                    </button>
+                    <button class="operations__tab-btn operations__tab-btn-2">
+                        02 Instant Loans
+                    </button>
+                    <button class="operations__tab-btn operations__tab-btn-3">
+                        03 Instant Closing
+                    </button>
+                </div>
+
+                <div class="operation">
+                    <div class="operation__icon operation__icon-transfer">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#icon-tab"></use>
+                        </svg>
+                    </div>
+
+                    <div class="operation__title">
+                        <h3 class="heading-3">
+                            Transfer money to anyone instantly! No fees, no BS.
+                        </h3>
+                        <p class="operation__txt">
+                            With our instant transfer feature, you can send
+                            money to anyone, anywhere, at any time. No hidden
+                            fees, no complicated processes - just simple, fast,
+                            and secure transactions.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="operation">
+                    <div class="operation__icon operation__icon-loan">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#icon-home"></use>
+                        </svg>
+                    </div>
+                    <div class="operation__title">
+                        <h3 class="heading-3">
+                            Buy a home with ease using our loan and mortgage
+                            services.
+                        </h3>
+                        <p class="operation__txt">
+                            With our loan and mortgage services, buying a home
+                            has never been easier. We offer competitive rates
+                            and flexible terms to help you secure your dream
+                            home.
+                        </p>
+                    </div>
+                </div>
+                <div class="operation">
+                    <div class="operation__icon operation__icon-close">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#icon-exit"></use>
+                        </svg>
+                    </div>
+                    <div class="operation__title">
+                        <h3 class="heading-3">
+                            Close your account anytime, hassle-free.
+                        </h3>
+                        <p class="operation__txt">
+                            Closing your account with us is quick and easy.
+                            Simply contact our customer service team, and we'll
+                            guide you through the process without any hassle or
+                            hidden fees.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ############ TESTIMONIALS ##########-->
+            <section class="testimonials">
+                <h4 class="heading-4">Not sure yet?</h4>
+                <h2 class="heading-2">
+                    Millions of customers are already enjoying our services.
+                </h2>
+                <div class="testimonial">
+                    <h5 class="heading-5">
+                        I made best decision by choosing Bankist!
+                    </h5>
+                    <p class="testimonial__txt">
+                        This is the best bank I've ever used.Absolutely love
+                        Bankist! The app is intuitive, secure, and fast.
+                        Customer support is excellent. Banking has never been
+                        easier!
+                    </p>
+                    <div class="customer">
+                        <img
+                            src="img/user-1.jpg"
+                            alt="User 1"
+                            class="customer__img" />
+                        <div class="customer__detail">
+                            <p class="customer__name">shiv jee</p>
+                            <address class="location">Kathmandu Nepal</address>
+                        </div>
+                    </div>
+                    <div class="dots">
+                        <button class="dots__btn dots__btn--active"></button>
+                        <button class="dots__btn"></button>
+                        <button class="dots__btn"></button>
+                    </div>
+                    <button class="slide__btn slide__prev">&leftarrow;</button>
+                    <button class="slide__btn slide__next">&rightarrow;</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- ############ FOOTER ##########-->
+        <footer class="footer">
+            <h5 class="footer__header">
+                The best day to join our Bank was one year ago. The sescond best
+                is today!
+            </h5>
+            <button class="footer__btn">Open your free acccount today!</button>
+            <div class="footer__nav">
+                <ul class="footer__itms">
+                    <li class="footer__itm">
+                        <a class="footer__link" href="#">About Us</a>
+                    </li>
+                    <li class="footer__itm">
+                        <a class="footer__link" href="#">Pricing</a>
+                    </li>
+                    <li class="footer__itm">
+                        <a class="footer__link" href="#"
+                            >Terms and Conditions</a
+                        >
+                    </li>
+                    <li class="footer__itm">
+                        <a class="footer__link" href="#">Privacy Policy</a>
+                    </li>
+                    <li class="footer__itm">
+                        <a class="footer__link" href="#">Careers</a>
+                    </li>
+                    <li class="footer__itm">
+                        <a class="footer__link" href="#">Blog</a>
+                    </li>
+                    <li class="footer__itm">
+                        <a class="footer__link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <img src="./img/icon.png" alt="Logo" class="footer__logo" />
+            <p class="footer__copyright">
+                &copy; Copyright 2024 by Bankist. All rights reserved.
+            </p>
+        </footer>
+    </body>
 </html>
