@@ -64,11 +64,21 @@ ol {
 /* Navigation */
 .header {
     height: 100vh;
+    margin-bottom: 10rem;
+    border-bottom: 1px solid #ccc;
+
 }
 .nav {
     display: flex;
     justify-content: space-between;
     padding: 2.4rem 3.2rem;
+    background-color: #fff;
+    width: 100%;
+    z-index: 10;
+    opacity: 0.95;
+}
+.nav.sticky {
+    position: fixed;
 }
 .nav__logo {
     height: 3.2rem;
@@ -88,7 +98,7 @@ ol {
 
 .nav__link:hover,
 .nav__link:active {
-    color: #777;
+    color: #333;
 }
 
 .nav__itm--btn:link,
@@ -103,7 +113,7 @@ ol {
 .nav__itm--btn:hover,
 .nav__itm--btn:active {
     background-color: var(--color-blue-2);
-    color: #ccc;
+    /* color: #ccc; */
 }
 
 /* HEADINGS */
@@ -138,7 +148,6 @@ ol {
     align-items: center;
 
     padding: 0 15rem;
-    border: 2px solid red;
 }
 .header__txt--box {
     display: flex;
@@ -182,11 +191,26 @@ ol {
     padding-bottom: 0.4rem;
 }
 
+/* GENERAL CLASSES */
+.section {
+    transition: all 0.3s ease-in;
+}
+.section--hidden {
+    opacity: 0;
+    transform: translateY(8rem);
+}
+
+.lazy-img {
+    filter: blur(20px);
+}
+
 /* ############ FEATURES ##############*/
 
 .features {
     max-width: 112rem;
     margin: 0 auto;
+    /* border-bottom: 1px solid #666; */
+
 }
 
 .features__itms {
@@ -203,6 +227,7 @@ ol {
 }
 .features__img {
     width: 100%;
+    transition: filter 0.3s ease-in;
 }
 
 .features__icon {
@@ -225,6 +250,9 @@ ol {
     font-size: 1.4rem;
 }
 /* ############ OPERATIONS ##############*/
+.operations__tab--active {
+    transform: translateY(-15px);
+}
 
 .operations {
     max-width: 112rem;
@@ -236,20 +264,23 @@ ol {
     gap: 4rem;
     justify-content: center;
     margin-top: 6.4rem;
+    margin-bottom: -2.5rem;
 }
-.operations__tab-btn {
+
+.operations__tab {
     font-size: 2rem;
     border-radius: 5rem;
     padding: 1rem 2rem;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
-.operations__tab-btn-1 {
+.operations__tab--1 {
     background-color: var(--color-lime-400);
 }
-.operations__tab-btn-2 {
+.operations__tab--2 {
     background-color: var(--color-blue-400);
 }
-.operations__tab-btn-3 {
+.operations__tab--3 {
     background-color: var(--color-orange-400);
 }
 
@@ -259,6 +290,10 @@ ol {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 2rem;
+}
+
+.hidden {
+    display: none;
 }
 .operation__icon {
     grid-column: 1/2;
@@ -306,13 +341,23 @@ ol {
 
 /* ############ TESTIMONILS ##############*/
 .testimonials {
-    max-width: 112rem;
-    margin: 12rem auto;
-}
-.testimonial {
     position: relative;
-    margin: 8rem 15rem;
-    /* border: 2px solid red; */
+    max-width: 112rem;
+    margin: 0 auto;
+    padding: 8rem 10rem;
+    margin-bottom: 1px solid #555;
+}
+
+.testimonial {
+    height: 40rem;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10rem;
+}
+.slide {
+    position: absolute;
+    transition: transform 0.3s ease-in;
+    padding: 0 3.2rem;
 }
 
 .testimonial__txt {
@@ -338,6 +383,10 @@ ol {
     display: flex;
     gap: 1rem;
     justify-content: center;
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .dots__btn {
     display: block;
@@ -346,14 +395,16 @@ ol {
     border-radius: 50%;
     background-color: var(--color-blue-1);
     cursor: pointer;
+    transition: all 0.3s ease-in;
 }
-/* .slide__btns {
-    position: absolute;
-    top: 80%;
-    } */
+
+.dots__btn--active {
+    background-color: var(--color-blue-400);
+}
+
 .slide__btn {
     position: absolute;
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     top: 50%;
     background-color: #fff;
     border-radius: 50%;
@@ -361,11 +412,11 @@ ol {
     height: 5.2rem;
     cursor: pointer;
 }
-.slide__prev{
-    left: -10%;
+.slide__prev {
+    left: 5%;
 }
-.slide__next{
-    right: -10%
+.slide__next {
+    right: -5%;
 }
 
 /* ############ FOOTER ##############*/
