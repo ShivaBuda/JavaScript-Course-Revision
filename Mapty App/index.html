@@ -5,7 +5,122 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Mapty | Welcome</title>
         <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin="" />
+        <script
+            defer
+            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
         <script defer src="script.js"></script>
     </head>
-    <body></body>
+    <body>
+        <div class="main__container">
+            <div class="form__container">
+                <header class="header">
+                    <nav class="nav">
+                        <div class="logo">Mapty</div>
+                    </nav>
+                </header>
+                <ul class="workouts">
+                    <form action="" class="form hidden">
+                        <div class="form__row">
+                            <label class="form__label">Type</label>
+                            <select class="form__input form__input--type">
+                                <option value="running">Running</option>
+                                <option value="cycling">Cycling</option>
+                            </select>
+                        </div>
+                        <div class="form__row">
+                            <label class="form__label">Distance</label>
+                            <input
+                                class="form__input form__input--distance"
+                                placeholder="km"
+                                type="number"
+                                required />
+                        </div>
+                        <div class="form__row">
+                            <label class="form__label">Duration</label>
+                            <input
+                                class="form__input form__input--duration"
+                                placeholder="min"
+                                type="number"
+                                required />
+                        </div>
+                        <div class="form__row form__row--cadence">
+                            <label class="form__label">Cadence</label>
+                            <!-- Removed REQUIRED attribute from this input or spit out error  -->
+                            <input
+                                class="form__input form__input--cadence"
+                                placeholder="step/min"
+                                type="number" />
+                        </div>
+                        <div
+                            class="form__row form__row--elevation form__row--hidden">
+                            <label class="form__label">Elev Gain</label>
+                            <!-- Removed REQUIRED attribute from this input or spit out error  -->
+
+                            <input
+                                class="form__input form__input--elevation"
+                                placeholder="meters"
+                                type="number" />
+                        </div>
+
+                        <button class="form__btn">OK</button>
+                    </form>
+
+                    <!-- <li class="workouts__itm">
+                            <h2 class="workout__title">Running on Sept 8</h2>
+                            <div class="workouts__details">
+                                <span class="worksouts__icon">🏃</span>
+                                <span class="workouts__value">2.4</span>
+                                <span class="workouts__unit">km</span>
+                            </div>
+                            <div class="workouts__details">
+                                <span class="worksouts__icon">🕛</span>
+                                <span class="workouts__value">10</span>
+                                <span class="workouts__unit">min</span>
+                            </div>
+                            <div class="workouts__details">
+                                <span class="worksouts__icon">⚡️</span>
+                                <span class="workouts__value">14</span>
+                                <span class="workouts__unit">min/km</span>
+                            </div>
+                            <div class="workouts__details">
+                                <span class="worksouts__icon">🦶🏼</span>
+                                <span class="workouts__value">178</span>
+                                <span class="workouts__unit">spm</span>
+                            </div>
+                        </li>
+                        <li class="workouts__itm">
+                            <h2 class="workout__title">Running on Sept 8</h2>
+                            <div class="workouts__details">
+                                <span class="worksouts__icon">🏃</span>
+                                <span class="workouts__value">2.4</span>
+                                <span class="workouts__unit">km</span>
+                            </div>
+                            <div class="workouts__details">
+                                <span class="worksouts__icon">🕛</span>
+                                <span class="workouts__value">10</span>
+                                <span class="workouts__unit">min</span>
+                            </div>
+                            <div class="workouts__details">
+                                <span class="worksouts__icon">⚡️</span>
+                                <span class="workouts__value">14</span>
+                                <span class="workouts__unit">min/km</span>
+                            </div>
+                            <div class="workouts__details">
+                                <span class="worksouts__icon">🦶🏼</span>
+                                <span class="workouts__value">178</span>
+                                <span class="workouts__unit">spm</span>
+                            </div>
+                        </li> -->
+                </ul>
+            </div>
+            <div id="map" class="main__map">Map</div>
+        </div>
+    </body>
 </html>
