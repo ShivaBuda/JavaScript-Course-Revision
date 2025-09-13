@@ -14,7 +14,7 @@ html {
 body {
     line-height: 1.5;
     font-family: sans-serif;
-    background: #e6e3e3;
+    background: rgb(157, 128, 157);
     color: #444;
     letter-spacing: 1px;
     font-weight: 400;
@@ -46,4 +46,44 @@ a {
 ul,
 ol {
     list-style: none;
+}
+
+/* ################################### */
+.header {
+    padding: 3.2rem;
+    text-align: center;
+}
+
+.main {
+    height: 80vh;
+}
+.card {
+    width: 25rem;
+    height: 35rem;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card__details {
+    padding: 2.4rem;
+}
+.header-4 {
+    color: #777;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.card__population{
+     margin-top: 1rem;
+}
+.card__txt {
+    display: flex;
+    gap: 1.2rem;
+    font-weight: 600;
+    color: #777;
+    line-height: 2.2rem;
 }
