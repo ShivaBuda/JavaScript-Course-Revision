@@ -54,17 +54,37 @@ ol {
     text-align: center;
 }
 
-.main {
-    height: 80vh;
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+     transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+.card__flag-box {
+    height: 25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.card__flag {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
 }
 .card {
-    width: 25rem;
-    height: 35rem;
-    margin: auto;
+    width: 30rem;
     background-color: #fff;
     border-radius: 0.4rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     overflow: hidden;
+   
+}
+
+.card--neighbour{
+     transform: scale(0.8);
+     /* height: 35rem; */
+     /* width: 25rem; */
 }
 
 .card__details {
@@ -77,8 +97,8 @@ ol {
     font-weight: 600;
 }
 
-.card__population{
-     margin-top: 1rem;
+.card__population {
+    margin-top: 1rem;
 }
 .card__txt {
     display: flex;
