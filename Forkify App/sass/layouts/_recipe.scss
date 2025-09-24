@@ -16,10 +16,168 @@
             font-size: 1.3rem;
         }
     }
+
+    &__figure {
+        height: 30rem;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image: linear-gradient(
+                to right bottom,
+                $color-amber-100,
+                $color-amber-700
+            );
+            position: absolute;
+            opacity: 0.5;
+        }
+    }
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__title {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 20%) skewY(-6deg);
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        color: $color-stone-100;
+        text-align: center;
+        width: 50%;
+        line-height: 1.7;
+        z-index: 2;
+
+        span {
+            box-decoration-break: clone;
+            background-image: linear-gradient(
+                to right bottom,
+                $color-amber-300,
+                $color-amber-700
+            );
+            padding: 1rem 2rem;
+        }
+    }
+    // RECIPE DETAILS
+    &__details {
+        display: flex;
+        align-items: center;
+        padding: 6.4rem 2rem 2.8rem 2rem;
+        gap: 3.2rem;
+        background-color: $color-amber-100;
+        font-size: 1.4rem;
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+    &__user-icon {
+        margin-left: auto;
+    }
+
+    &__info-num {
+        font-weight: bolder;
+        margin-left: 1rem;
+    }
+
+    &__info-txt {
+        text-transform: uppercase;
+    }
+
+    &__info-btns {
+        display: flex;
+        gap: 0.4rem;
+    }
+
+    // INGREDIENTS
+    &__ingredients {
+        background-color: $color-amber-300;
+        padding: 4.8rem 6.4rem;
+        text-align: center;
+
+        &-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3.2rem;
+        }
+
+        &-itm {
+            display: flex;
+            align-items: center;
+            font-size: 1.4rem;
+        }
+
+        &-icon {
+            margin-right: 1.2rem;
+        }
+    }
+
+    &__directions {
+        text-align: center;
+        padding: 6.4rem;
+
+        &-txt {
+            font-weight: bold;
+            color: $color-stone-500;
+        }
+    }
+
+    &__btn {
+        background-image: linear-gradient(
+            to right bottom,
+            $color-amber-300,
+            $color-amber-700
+        );
+        display: flex;
+
+        &:link,
+        &:visited {
+            display: inline-block;
+            padding: 1rem 2rem;
+            color: $color-stone-100;
+            border-radius: 5rem;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.2rem;
+            max-width: min-content;
+            margin: 0 auto;
+            margin-top: 2rem;
+        }
+        &-icon {
+            fill: $color-stone-100;
+            width: 2rem;
+            height: 2rem;
+        }
+    }
 }
 
 .recipe--icon {
     width: 2rem;
     height: 2rem;
     fill: $color-amber-700;
+}
+
+.heading-2 {
+    text-transform: uppercase;
+    color: $color-amber-700;
+    font-size: 2.4rem;
+    margin-bottom: 3.2rem;
+}
+.btn-sm {
+    background: none;
+    cursor: pointer;
 }

@@ -69,16 +69,17 @@
 
             <!-- ********* MAIN CONTAINER ********** -->
             <main class="main">
-               <section class="preview__search">
+                <section class="preview__search">
                     <ul class="preview__itms">
                         <li class="preview__itm">
                             <a href="#" class="preview__link">
                                 <figure class="preview__fig">
-                                    <img src="./img/test_img.jpg" alt="">
-
+                                    <img src="./img/test_img.jpg" alt="" />
                                 </figure>
                                 <div class="preview__info">
-                                    <h3 class="preview__title">Pasta with tomato sauce</h3>
+                                    <h3 class="preview__title">
+                                        Pasta with tomato sauce
+                                    </h3>
                                     <p class="preview__publisher">Shiv Buda</p>
                                     <!-- <div class="preview__user-icon">
                                         <svg>
@@ -91,11 +92,12 @@
                         <li class="preview__itm">
                             <a href="#" class="preview__link">
                                 <figure class="preview__fig">
-                                    <img src="./img/test_img.jpg" alt="">
-
+                                    <img src="./img/test_img.jpg" alt="" />
                                 </figure>
                                 <div class="preview__info">
-                                    <h3 class="preview__title">Pasta with tomato sauce</h3>
+                                    <h3 class="preview__title">
+                                        Pasta with tomato sauce
+                                    </h3>
                                     <p class="preview__publisher">Shiv Buda</p>
                                     <!-- <div class="preview__user-icon">
                                         <svg>
@@ -109,8 +111,9 @@
                 </section>
 
                 <!-- ********* SECTION RECIPE ********** -->
-                 <section class="recipe">
-                     <div class="recipe__message">
+                <!-- RECIPE MESSAGE -->
+                <section class="recipe">
+                    <div class="recipe__message">
                         <svg class="recipe--icon">
                             <use href="./img/icons.svg#icon-smile"></use>
                         </svg>
@@ -119,11 +122,117 @@
                             fun making a pizza!
                         </p>
                     </div>
-                 </section>
+
+                    <!-- RECIPES -->
+                    <figure class="recipe__figure">
+                        <img
+                            src="./img/test_img.jpg"
+                            alt="Pizza"
+                            class="recipe__img" />
+                        <h1 class="recipe__title">
+                            <span>Pasta with tomato sauce</span>
+                        </h1>
+                    </figure>
+
+                    <div class="recipe__details">
+                        <div class="recipe__info">
+                            <svg class="recipe--icon">
+                                <use href="./img/icons.svg#icon-clock"></use>
+                            </svg>
+                            <span class="recipe__info-num">45</span>
+                            <span class="recipe__info-txt">minutes</span>
+                        </div>
+
+                        <div class="recipe__info">
+                            <svg class="recipe--icon">
+                                <use href="./img/icons.svg#icon-users"></use>
+                            </svg>
+                            <span class="recipe__info-num">4</span>
+                            <span class="recipe__info-txt"> servings </span>
+                        </div>
+
+                        <div class="recipe__info-btns">
+                            <button class="btn-sm btn--adjust-servings">
+                                <svg class="recipe--icon">
+                                    <use
+                                        href="./img/icons.svg#icon-minus-circle"></use>
+                                </svg>
+                            </button>
+                            <button class="btn-sm btn--adjust-servings">
+                                <svg class="recipe--icon">
+                                    <use
+                                        href="./img/icons.svg#icon-plus-circle"></use>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="recipe__user-icon">
+                            <svg class="recipe--icon">
+                                <use href="./img/icons.svg#icon-user"></use>
+                            </svg>
+                        </div>
+                        <div class="recipe__bookmark-btn">
+                            <svg class="recipe--icon">
+                                <use href="./img/icons.svg#icon-bookmark"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <!--  INGREDIENTS -->
+                    <div class="recipe__ingredients">
+                        <h2 class="heading-2">Recipe ingredients</h2>
+
+                        <ul class="recipe__ingredients-list">
+                            <li class="recipe__ingredients-itm">
+                                <svg
+                                    class="recipe__ingredients-icon recipe--icon">
+                                    <use
+                                        href="./img/icons.svg#icon-check"></use>
+                                </svg>
+                                <p class="recipe__quantity">100</p>
+                                <p class="recipe__description">
+                                    <span class="recipe__unit">g</span>
+                                    dry pasta
+                                </p>
+                            </li>
+                            <li class="recipe__ingredients-itm">
+                                <svg class="recipe--icon">
+                                    <use
+                                        href="./img/icons.svg#icon-check"></use>
+                                </svg>
+                                <p class="recipe__quantity">100</p>
+                                <p class="recipe__description">
+                                    <span class="recipe__unit">g</span>
+                                    dry pasta
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- RECIPE DIRECTION -->
+                    <div class="recipe__directions">
+                        <h2 class="heading-2">How to cook it</h2>
+                        <p class="recipe__directions-txt">
+                            This recipe was carefully designed and tested by
+                            <span class="recipe__publisher">Shiv Buda</span>
+                            . For full instructions and tips, please check out
+                            directions at their official website.
+                        </p>
+                        <a
+                            href="http://thepioneerwoman.com/cooking/pasta-with-tomato-cream-sauce/"
+                            target="_blank"
+                            class="recipe__btn">
+                            <span>Directions</span>
+                            <svg class="recipe__btn-icon">
+                                <use
+                                    href="./img/icons.svg#icon-arrow-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </section>
             </main>
 
-          <!-- ********* HEADER ********** -->
-          <!-- ********* HEADER ********** -->
+            <!-- ********* HEADER ********** -->
+            <!-- ********* HEADER ********** -->
         </div>
     </body>
 </html>
