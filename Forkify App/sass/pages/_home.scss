@@ -1,0 +1,11 @@
+@use "../base/base" as *;
+.container {
+    max-width: 112rem;
+    background-color: $color-stone-100;
+    margin: 3.2rem auto;
+    border-radius: 0.4rem;
+}
+.main {
+    display: grid;
+    grid-template-columns: minmax(30rem, min-content) 1fr;
+}
