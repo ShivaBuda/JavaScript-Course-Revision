@@ -1,0 +1,25 @@
+@use "../base/base" as *;
+
+.recipe {
+    grid-column: 2/-1;
+    background-color: $color-amber-100;
+    padding: 2rem 4rem;
+
+    &__message {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3.2rem;
+
+        & p {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.recipe--icon {
+    width: 2rem;
+    height: 2rem;
+    fill: $color-amber-700;
+}
