@@ -1,0 +1,73 @@
+@use "../base/base" as *;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: $color-amber-100;
+}
+
+.logo__img {
+    width: 8rem;
+    //     height: 100%;
+}
+
+.nav__btn svg,
+.btn svg {
+    width: 2rem;
+    height: 2rem;
+    fill: $color-amber-300;
+}
+.search {
+    display: flex;
+    &__input {
+        padding: 1rem 2rem;
+        border-radius: 5rem;
+        outline: none;
+        border: none;
+        background-color: $color-stone-100;
+        font-size: 1rem;
+        color: $color-stone-500;
+    }
+}
+
+.search__btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-image: linear-gradient(
+        to right,
+        $color-amber-300,
+        $color-amber-500
+    );
+    color: $color-stone-100;
+    border-radius: 5rem;
+    padding: 1rem 2rem;
+    transform: translateX(-60px);
+
+    & svg {
+        fill: $color-stone-100;
+    }
+}
+
+.nav {
+    &__list {
+        display: flex;
+        gap: 2.4rem;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        background: none;
+        cursor: pointer;
+    }
+    & svg {
+        fill: $color-amber-500;
+    }
+}
+.bookmarks__list {
+    display: none;
+}

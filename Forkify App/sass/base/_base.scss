@@ -1,0 +1,52 @@
+// COLORS
+$color-amber-100: #fef3c7;
+$color-amber-300: #fcd34d;
+$color-amber-500: #f59e0b;
+$color-amber-700: #b45309;
+
+$color-stone-100: #fafaf9;
+$color-stone-300: #d6d3d1;
+$color-stone-500: #78716c;
+$color-stone-700: #44403c;
+// CSS RESET
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+a:link {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+button{
+    border: none;
+    // background-color: transparent;
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+
+    letter-spacing: 1.2px;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: ("wdth" 100);
+    min-height: 100vh;
+    color: $color-stone-700;
+    background-image: linear-gradient(
+        to right,
+        $color-amber-300,
+        $color-amber-700
+    );
+}
+
+
