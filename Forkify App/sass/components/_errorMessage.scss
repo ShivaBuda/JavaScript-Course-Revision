@@ -1,0 +1,12 @@
+@use "../base/base" as *;
+.error {
+    padding: 3.2rem 0;
+    text-align: center;
+
+    &__icon {
+        width: 3.2rem;
+        height: 3.2rem;
+        fill: $color-amber-500;
+        margin-bottom: 1.4rem;
+    }
+}
