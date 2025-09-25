@@ -1,6 +1,7 @@
 @use "./base/base";
 @use "./components/errorMessage";
 @use "./components/loadingSpinner";
+@use "./components/modal";
 @use "./layouts/header";
 @use "./layouts/previewSearch";
 @use "./layouts/recipe";

@@ -249,7 +249,72 @@
             </main>
 
             <!-- ********* HEADER ********** -->
-            <!-- ********* HEADER ********** -->
+        </div>
+        <!-- ********* MODAL WINDOW ********** -->
+        <div class="modal hidden">
+            <form class="upload hidden">
+                <div class="upload__btn-close">&times;</div>
+                <div class="upload__column">
+                    <h2 class="upload__heading">Recipe data</h2>
+                    <label for="title">Title</label>
+                    <input type="text" name="title" required />
+
+                    <label for="url">URL</label>
+                    <input type="url" name="url" required />
+
+                    <label for="image-url">Image URL</label>
+                    <input type="text" name="image-url" required />
+
+                    <label for="publisher">Publisher</label>
+                    <input type="text" name="publisher" required />
+
+                    <label for="prepTime">Prep time</label>
+                    <input type="time" name="prepTime" required />
+
+                    <label for="title">Servings</label>
+                    <input type="number" name="serving" required />
+                </div>
+                <div class="upload__column">
+                    <h2 class="upload__heading">Ingredients</h2>
+                    <label for="">Ingredients 1</label>
+                    <input
+                        type="text"
+                        name="ingredi-1"
+                        required
+                        placeholder="Format:'Quantity, Unit, Description'" />
+                    <label for="">Ingredients 2</label>
+                    <input
+                        type="text"
+                        name="ingredi-1"
+                        required
+                        placeholder="Format:'Quantity, Unit, Description'" />
+                    <label for="">Ingredients 3</label>
+                    <input
+                        type="text"
+                        name="ingredi-1"
+                        required
+                        placeholder="Format:'Quantity, Unit, Description'" />
+                    <label for="">Ingredients 4</label>
+                    <input
+                        type="text"
+                        name="ingredi-1"
+                        required
+                        placeholder="Format:'Quantity, Unit, Description'" />
+                    <label for="">Ingredients 5</label>
+                    <input
+                        type="text"
+                        name="ingredi-1"
+                        required
+                        placeholder="Format:'Quantity, Unit, Description'" />
+                    <label for="">Ingredients 6</label>
+                    <input
+                        type="text"
+                        name="ingredi-1"
+                        required
+                        placeholder="Format:'Quantity, Unit, Description'" />
+                </div>
+                <button class="upload__btn">upload</button>
+            </form>
         </div>
     </body>
 </html>

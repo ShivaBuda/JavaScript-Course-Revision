@@ -45,7 +45,7 @@ ol {
     list-style: none;
 }
 
-a {
+a:link {
     text-decoration: none;
 }
 
