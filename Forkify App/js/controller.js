@@ -2,6 +2,7 @@
 
 import * as model from "./model.js";
 import recipeView from "./views/recipeView.js";
+import searchView from "./views/searchView.js";
 
 const controllShowRecipe = async () => {
     try {
@@ -18,12 +19,28 @@ const controllShowRecipe = async () => {
         //RENDER RECIPE
         recipeView.render(model.state.recipe);
     } catch (error) {
-        recipeView.renderError()
+        recipeView.renderError();
     }
+};
+
+const controlSearchResults = async function () {
+    try {
+        //  RENDER SPINNER
+        recipeView.renderSpinner();
+
+        // GET SEARCH QUERY
+        const query = searchView.getQuery()
+        if(!query) return;
+
+        // LOAD SEARCH RESULTS
+        await model.getSearchResults(query);
+        console.log(query);
+    } catch (error) {}
 };
 
 const init = function () {
     recipeView.addHandlerRender(controllShowRecipe);
+    searchView.addHandlerSearch(controlSearchResults)
 };
 
 init();
