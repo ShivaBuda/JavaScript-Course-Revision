@@ -1,62 +1,11 @@
 // import { Fraction } from "fractional"
+import View from "./view.js";
 
-class RecipeView {
-    #parentEl = document.querySelector(".recipe");
-    #errorMessage =
+class RecipeView extends View {
+    _parentEl = document.querySelector(".recipe");
+    _errorMessage =
         "We could not find the recipe. Please try again with another one!";
-    #message = "";
-    #data;
-    render(data) {
-        this.#data = data;
-        const markup = this.#generateMarkup();
-
-        this.#clearEl();
-        this.#parentEl.insertAdjacentHTML("afterbegin", markup);
-    }
-
-    #clearEl() {
-        this.#parentEl.innerHTML = "";
-    }
-
-    renderSpinner() {
-        const html = `
-        <div class="spinner">
-            <svg>
-                <use href="./img/icons.svg#icon-spinner3"></use>
-            </svg>
-        </div>
-        `;
-        this.#clearEl();
-        this.#parentEl.insertAdjacentHTML("afterbegin", html);
-    }
-
-    renderError(message = this.#errorMessage) {
-        const markup = `
-     <div class="error">
-            <div>
-              <svg class="error__icon">
-                <use href="./img/icons.svg#icon-alert-triangle"></use>
-              </svg>
-            </div>
-            <p>${message}!</p>
-     </div>`;
-        this.#clearEl();
-        this.#parentEl.insertAdjacentHTML("afterbegin", markup);
-    }
-
-    renderMessage(message = this.#message) {
-        const markup = `
-     <div class="message">
-            <div>
-              <svg>
-                <use href="src/img/icons.svg#icon-smile"></use>
-              </svg>
-            </div>
-            <p>${message}!</p>
-     </div>`;
-        this.#clearEl();
-        this.#parentEl.insertAdjacentHTML("afterbegin", markup);
-    }
+    _message = "";
 
     addHandlerRender(handler) {
         ["hashchange", "load"].forEach((event) =>
@@ -64,15 +13,15 @@ class RecipeView {
         );
     }
 
-    #generateMarkup() {
+    _generateMarkup() {
         return `
                     <figure class="recipe__figure">
                         <img
-                            src="${this.#data.image}"
-                            alt="${this.#data.title}"
+                            src="${this._data.image}"
+                            alt="${this._data.title}"
                             class="recipe__img" />
                         <h1 class="recipe__title">
-                            <span>${this.#data.title}</span>
+                            <span>${this._data.title}</span>
                         </h1>
                     </figure>
 
@@ -82,7 +31,7 @@ class RecipeView {
                                 <use href="./img/icons.svg#icon-clock"></use>
                             </svg>
                             <span class="recipe__info-num">${
-                                this.#data.cookingTime
+                                this._data.cookingTime
                             }</span>
                             <span class="recipe__info-txt">minutes</span>
                         </div>
@@ -92,7 +41,7 @@ class RecipeView {
                                 <use href="./img/icons.svg#icon-users"></use>
                             </svg>
                             <span class="recipe__info-num">${
-                                this.#data.servings
+                                this._data.servings
                             }</span>
                             <span class="recipe__info-txt"> servings </span>
                         </div>
@@ -128,8 +77,8 @@ class RecipeView {
                         <h2 class="heading-2">Recipe ingredients</h2>
 
                         <ul class="recipe__ingredients-list">
-                        ${this.#data.ingredients
-                            .map(this.#generateIngredientMarkup)
+                        ${this._data.ingredients
+                            .map(this._generateIngredientMarkup)
                             .join("")}
                             
                             <li class="recipe__ingredients-itm">
@@ -151,13 +100,13 @@ class RecipeView {
                         <p class="recipe__directions-txt">
                             This recipe was carefully designed and tested by
                             <span class="recipe__publisher">${
-                                this.#data.publisher
+                                this._data.publisher
                             }</span>
                             . For full instructions and tips, please check out
                             directions at their official website.
                         </p>
                         <a
-                            href="${this.#data.sourceUrl}"
+                            href="${this._data.sourceUrl}"
                             target="_blank"
                             class="recipe__btn">
                             <span>Directions</span>
@@ -169,7 +118,7 @@ class RecipeView {
                     </div>`;
     }
 
-    #generateIngredientMarkup(ingred) {
+    _generateIngredientMarkup(ingred) {
         return `<li class="recipe__ingredients-itm">
                     <svg
                          class="recipe__ingredients-icon recipe--icon">

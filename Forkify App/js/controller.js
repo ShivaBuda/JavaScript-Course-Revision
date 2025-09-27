@@ -3,18 +3,23 @@
 import * as model from "./model.js";
 import recipeView from "./views/recipeView.js";
 import searchView from "./views/searchView.js";
+import resultView from "./views/resultView.js";
 
-const controllShowRecipe = async () => {
+// if (module.hot) {
+//     module.hot.accept();
+// }
+
+const controlShowRecipe = async () => {
     try {
         const id = window.location.hash.slice(1);
         if (!id) return;
-
-        recipeView.renderSpinner();
-        //FETCHING RECIPE DATA
-        await model.getRecipeData(id);
+        console.log(id);
 
         // LOADING SPINNER
         recipeView.renderSpinner();
+
+        //FETCHING RECIPE DATA
+        await model.getRecipeData(id);
 
         //RENDER RECIPE
         recipeView.render(model.state.recipe);
@@ -26,21 +31,24 @@ const controllShowRecipe = async () => {
 const controlSearchResults = async function () {
     try {
         //  RENDER SPINNER
-        recipeView.renderSpinner();
+        resultView.renderSpinner();
 
         // GET SEARCH QUERY
-        const query = searchView.getQuery()
-        if(!query) return;
+        const query = searchView.getQuery();
+        if (!query) return;
 
         // LOAD SEARCH RESULTS
         await model.getSearchResults(query);
-        console.log(query);
+
+        // RENDER RESULTS
+        // resultView.render(model.state.search.results);
+        resultView.render(model.getSearchResultsPage(1));
     } catch (error) {}
 };
 
 const init = function () {
-    recipeView.addHandlerRender(controllShowRecipe);
-    searchView.addHandlerSearch(controlSearchResults)
+    recipeView.addHandlerRender(controlShowRecipe);
+    searchView.addHandlerSearch(controlSearchResults);
 };
 
 init();
