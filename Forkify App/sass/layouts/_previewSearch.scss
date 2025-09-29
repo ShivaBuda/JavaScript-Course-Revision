@@ -16,11 +16,14 @@
             gap: 2rem;
             padding: 0.8rem 1.2rem;
             transition: all 0.3s;
+
         }
+            &--active{
+                background-color: $color-stone-300;
+            }
 
         &:hover,
         &:active {
-            background-color: $color-stone-300;
             transform: translateY(-2px);
         }
     }
@@ -58,10 +61,10 @@
     // justify-content: space-between;
     padding: 1.4rem 1.4rem 2.8rem 1.4rem;
 
-    &__btn-prev{
+    &__btn-prev {
         margin-right: auto;
     }
-    &__btn-next{
+    &__btn-next {
         margin-left: auto;
     }
 }

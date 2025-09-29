@@ -13,6 +13,17 @@ class RecipeView extends View {
         );
     }
 
+    addHandlerUpdateServings(handler) {
+        this._parentEl.addEventListener("click", (e) => {
+            const btn = e.target.closest(".btn--update-servings");
+            if (!btn) return;
+
+            const {updateTo} = btn.dataset;
+            console.log(btn, updateTo);
+            if (+updateTo > 0) handler(+updateTo);
+        });
+    }
+
     _generateMarkup() {
         return `
                     <figure class="recipe__figure">
@@ -47,13 +58,17 @@ class RecipeView extends View {
                         </div>
 
                         <div class="recipe__info-btns">
-                            <button class="btn-sm btn--adjust-servings">
+                            <button class="btn-sm btn--update-servings" data-update-to = "${
+                                this._data.servings - 1
+                            }">
                                 <svg class="recipe--icon">
                                     <use
                                         href="./img/icons.svg#icon-minus-circle"></use>
                                 </svg>
                             </button>
-                            <button class="btn-sm btn--adjust-servings">
+                            <button class="btn-sm btn--update-servings" data-update-to = "${
+                                this._data.servings + 1
+                            }">
                                 <svg class="recipe--icon">
                                     <use
                                         href="./img/icons.svg#icon-plus-circle"></use>
@@ -80,18 +95,6 @@ class RecipeView extends View {
                         ${this._data.ingredients
                             .map(this._generateIngredientMarkup)
                             .join("")}
-                            
-                            <li class="recipe__ingredients-itm">
-                                <svg class="recipe--icon">
-                                    <use
-                                        href="./img/icons.svg#icon-check"></use>
-                                </svg>
-                                <p class="recipe__quantity">100</p>
-                                <p class="recipe__description">
-                                    <span class="recipe__unit">g</span>
-                                    dry pasta
-                                </p>
-                            </li>
                         </ul>
                     </div>
                      <!-- RECIPE DIRECTION -->
@@ -101,8 +104,7 @@ class RecipeView extends View {
                             This recipe was carefully designed and tested by
                             <span class="recipe__publisher">${
                                 this._data.publisher
-                            }</span>
-                            . For full instructions and tips, please check out
+                            }</span>. For full instructions and tips, please check out
                             directions at their official website.
                         </p>
                         <a
