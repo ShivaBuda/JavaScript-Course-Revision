@@ -4,6 +4,8 @@ import * as model from "./model.js";
 import recipeView from "./views/recipeView.js";
 import searchView from "./views/searchView.js";
 import resultView from "./views/resultView.js";
+import paginationView from "./views/paginationView.js";
+
 
 // if (module.hot) {
 //     module.hot.accept();
@@ -43,12 +45,31 @@ const controlSearchResults = async function () {
         // RENDER RESULTS
         // resultView.render(model.state.search.results);
         resultView.render(model.getSearchResultsPage(1));
+
+        // RENDER INITIAL PAGINATION BUTTONS
+      paginationView.render(model.state.search)
     } catch (error) {}
 };
+
+const controlPagination = function(goToPage){
+    // RENDER NEW RESULTS
+    resultView.render(model.getSearchResultsPage(goToPage))
+
+    // RENDER NEW PAGINATION BUTTONS
+    paginationView.render(model.state.search)
+}
+
+const controlServings = ()=>{
+    // UPDATE THE RECIPE SERVINGS (IN STATE)
+    model.updateServings(6)
+
+    // Update the recipe view
+}
 
 const init = function () {
     recipeView.addHandlerRender(controlShowRecipe);
     searchView.addHandlerSearch(controlSearchResults);
+    paginationView.addHandlerClick(controlPagination)
 };
 
 init();

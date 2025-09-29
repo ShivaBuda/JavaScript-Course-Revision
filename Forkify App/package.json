@@ -1,13 +1,14 @@
 {
     "name": "forkify-pizza-app",
     "version": "1.0.0",
-    "description": "Final Udemy JavaScript project. It's about finding recipe of pizza.",
+    "description": "It's about finding recipes of pizza.",
+    "default": "index.html",
     "license": "ISC",
     "author": "Shiv Buda",
     "type": "commonjs",
     "scripts": {
         "start": "parcel index.html",
-        "build": "parcel build index.html",
+        "build": "parcel build index.html --dist-dir ./dist",
         "watch:sass": "sass sass/main.scss css/styles.css -w",
         "devserver": "live-server"
     },

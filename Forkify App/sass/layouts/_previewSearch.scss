@@ -55,8 +55,15 @@
 // PAGINATION
 .pagination {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     padding: 1.4rem 1.4rem 2.8rem 1.4rem;
+
+    &__btn-prev{
+        margin-right: auto;
+    }
+    &__btn-next{
+        margin-left: auto;
+    }
 }
 
 .btn--pagination {
